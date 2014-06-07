@@ -1,0 +1,44 @@
+@font-face
+{
+	font-family: OpenSans-Bold;
+	src: url("../open-sans/OpenSans-Bold.ttf");
+}
+
+nav {
+	height: 42px;
+	background: #c2c2c2 url('../images/meniu_centru.png') repeat-x;
+	border-bottom: 3px solid #25b8e2;
+	padding: 0px 169px 0px 169px;
+}
+	
+	nav ul {
+		width: 1005px;
+		margin: 0px;
+		list-style-type: none;
+		padding: 0px;
+	}
+	
+		nav ul img {
+			float: left;
+		}
+	
+		nav li {
+			padding: 12px 15px 0px 15px;
+			width: 135px;
+			float: left;
+			text-align: center;
+		}
+		
+		nav li a:hover {
+			cursor: pointer;
+			color: #25b8e2;
+		}
+		
+			nav li a {
+				font-family: OpenSans-Bold;
+				text-decoration: none;
+				color: #808080;
+			}
+	
+
+
