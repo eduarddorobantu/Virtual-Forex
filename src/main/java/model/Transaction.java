@@ -3,6 +3,7 @@ package model;
 import java.io.Serializable;
 import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,10 +15,14 @@ public class Transaction implements Serializable {
 	private static final long serialVersionUID = 3830870249449611823L;
 	
 	@Id private int id;
+	@Column(name="amount_from_ccy")
 	private double amountFromCurrency;
+	@Column(name="amount_to_ccy")
 	private double amountToCurrency;
 	private Date date;
+	@Column(name="from_currency")
 	private int fromCurrency;
+	@Column(name="to_currency")
 	private int toCurrency;
 	private int user;
 	

@@ -41,7 +41,6 @@ public class SecurityQuestion implements Serializable {
 	
 	public void setQuestion(String question) {
 		this.question = question;
-	}
-	
+	}	
 	
 }

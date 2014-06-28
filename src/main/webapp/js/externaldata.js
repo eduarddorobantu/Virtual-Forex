@@ -113,6 +113,8 @@ function getRatesCallback(data) {
   		var row = table_body.insertRow(i);
   		var name = results[i].name;
   		name = name.replace(" to ", "/");
+  		var link = '/forex/chart/' + name.replace("/", "").toLowerCase() + ".html";
+  		row.setAttribute("onclick", "window.document.location='" + link + "'");
   			
   		insertColouredCell(row, 0, name, results[i].rate, openRatesCurrencies[i]);
   		insertCellForRate(row, 1, results[i].rate, openRatesCurrencies[i]);
@@ -253,4 +255,8 @@ function updateColouredCell(row, position, insertResult, rate, lastRate) {
 	else
 		cell.style.color = "black";
 }
+
+
+
+
 

@@ -2,10 +2,13 @@ package model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "user")
@@ -18,10 +21,17 @@ public class User implements Serializable {
 	private String password;
 	private String name;
 	private String email;
-	private Country country;
-	private SecurityQuestion securityQuestion;
+	@JoinColumn(name="country")
+	@Column(name="country")
+	private int countryId;
+	@JoinColumn(name="security_question")
+	@Column(name="security_question")
+	private int securityQuestionId;
+	@Column(name="security_answer")
 	private String securityAnswer;
-	private Role role;
+	@JoinColumn(name="role")
+	@Column(name="role")
+	private int roleId;
 	
 	
 	public User() {
@@ -29,18 +39,18 @@ public class User implements Serializable {
 	}
 
 	public User(int id, String username, String password, String name,
-			String email, Country country, SecurityQuestion securityQuestion,
-			String securityAnswer, Role role) {
+			String email, int countryId, int securityQuestionId,
+			String securityAnswer, int roleId) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.name = name;
 		this.email = email;
-		this.country = country;
-		this.securityQuestion = securityQuestion;
+		this.countryId = countryId;
+		this.securityQuestionId = securityQuestionId;
 		this.securityAnswer = securityAnswer;
-		this.role = role;
+		this.roleId = roleId;
 	}
 
 	
@@ -84,20 +94,20 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public Country getCountry() {
-		return country;
+	public int getCountryId() {
+		return countryId;
 	}
 
-	public void setCountry(Country country) {
-		this.country = country;
+	public void setCountryId(int countryId) {
+		this.countryId = countryId;
 	}
 
-	public SecurityQuestion getSecurityQuestion() {
-		return securityQuestion;
+	public int getSecurityQuestionId() {
+		return securityQuestionId;
 	}
 
-	public void setSecurityQuestion(SecurityQuestion securityQuestion) {
-		this.securityQuestion = securityQuestion;
+	public void setSecurityQuestionId(int securityQuestionId) {
+		this.securityQuestionId = securityQuestionId;
 	}
 
 	public String getSecurityAnswer() {
@@ -108,12 +118,19 @@ public class User implements Serializable {
 		this.securityAnswer = securityAnswer;
 	}
 
-	public Role getRole() {
-		return role;
+	public int getRoleId() {
+		return roleId;
 	}
 
-	public void setRole(Role role) {
-		this.role = role;
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
+	}
+	
+	public String toString() {
+		return this.id + " " + this.name + " " + this.email + " " + 
+				this.username + " " + this.password + " " + 
+				this.countryId + " " + this.securityQuestionId + 
+				this.securityAnswer;
 	}
 	
 }

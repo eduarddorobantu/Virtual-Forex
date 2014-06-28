@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,6 +15,7 @@ public class Country implements Serializable {
 	
 	@Id private int id;
 	private String name;
+	@Column(name="alpha_code")
 	private String alphaCode;
 	
 	
