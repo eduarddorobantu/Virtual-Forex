@@ -25,17 +25,17 @@
 					</span>
 				</div>
 				<c:if test="${register_fail == null && register_success == null}">
-	   				<div id="info_register">
+	   				<div id="info_div">
 						<b>Info:</b> All the fields below are required!
 					</div>
 				</c:if>
 				<c:if test="${register_fail != null}">
-	   				<div id="error_register">
+	   				<div id="error_div">
 						<b>Error:</b> Username or email already exists in our database! Please fill in the form again!
 					</div>
 				</c:if>
 				<c:if test="${register_success != null}">
-	   				<div id="success_register">
+	   				<div id="success_div">
 						<b>Success:</b> You have successfully registered! Please login to play Virtual Forex!
 					</div>
 				</c:if>

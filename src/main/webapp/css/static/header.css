@@ -1,0 +1,125 @@
+header {
+	height: 110px;
+	background: url('/forex/images/dark-bg.jpg') top center repeat;
+	border-top: 3px solid #25b8e2;
+}
+	
+	#header_body {
+		width: 998px;
+		margin: 0px auto;
+	}
+
+	header #left {
+		height: 110px;
+		float: left;
+	}
+	
+		#left img {
+			width: 60px;
+			height: 58px;
+			float: left;
+			padding-top: 27px;
+		}
+		
+		h1 {
+			text-shadow: 0px 0px 2px rgba(151, 151, 151, 0.5);
+		    color: #E5DFDF;
+		    font-size: 50px;
+		    margin: 0px 0px 0px 10px;
+		    padding-top: 25px;
+		    float: left;
+		}
+		
+	header #right {
+		padding: 5px 16px 16px 16px;
+		color: #dcdcdc;
+		font-family: arial;
+		float: right;
+		background-color: #131313;
+		height: 10px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border: 1px solid #323232;
+	}
+	
+	header #right div {
+		color: white;
+	}
+	
+	header #right span {
+		color: #25B8E2;
+	}
+	
+	header #logout {
+		color: white !important;
+		cursor: pointer;
+	}
+	
+	header #logout:hover {
+		text-decoration: underline;
+	}
+	
+	header #right a {
+		color: white;
+	}
+	
+	header #right .flag:hover {
+		text-decoration: none !important;
+	}
+	
+	header #right img {
+		cursor: pointer;
+	}
+	
+	header #balance_label {
+		font-weight: bold;
+		color: #25B8E2;
+	}
+	
+	header #balance {
+		color: yellow;
+	}
+	
+		header #right_bottom {
+			float: right;
+			margin-top: 25px;
+		}
+		
+		header #twitter {
+			width: 40px;
+			height: 40px;
+			background: url('../../images/twitter1.png')
+		}
+		
+		header #twitter:hover {
+			width: 40px;
+			height: 40px;
+			background: url('../../images/twitter2.png');
+			cursor: pointer;
+		}
+		
+		header #facebook {
+			width: 40px;
+			height: 40px;
+			background: url('../../images/facebook1.png')
+		}
+		
+		header #facebook:hover {
+			width: 40px;
+			height: 40px;
+			background: url('../../images/facebook2.png');
+			cursor: pointer;
+		}
+		
+		header .right_bottom_item {
+			float: left;
+		}
+		
+		header #right_bottom img {
+			float: right;
+			height: 60px;
+			width: 360px;
+			margin-left: 25px;
+			border-radius: 4px;
+			margin-top: -10px;
+		}

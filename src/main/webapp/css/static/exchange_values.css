@@ -1,0 +1,31 @@
+
+#exchange_values {
+	width: 937px;
+	height: 20px;
+	margin: 7px;
+	margin-left: 27px;
+	margin-bottom: 15px;
+	overflow: hidden;
+	position: relative;
+}
+
+	#move_exchange_values {
+		position: relative;
+		width: 1500px;
+	}
+
+	.exchange_div {
+		float: left;	
+		width: 250px;
+	}
+	
+	
+	.exchange_div img {
+		width: 23px;
+		height: 16px;
+		
+	}
+	
+	.exchange_div span {
+		margin: 0px 2px;
+	}

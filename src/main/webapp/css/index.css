@@ -1,0 +1,64 @@
+@import url("static/main.css");
+@import url("static/header.css");
+@import url("static/nav.css");
+@import url("static/section.css");
+@import url("static/right_section.css");
+@import url("static/footer.css");
+
+*, *:before, *:after {
+	-webkit-box-sizing: content-box; 
+	box-sizing: content-box; 
+}
+
+.carousel {
+	margin-bottom: 20px;
+	float: left;
+	width: 660px;
+}
+
+	h2{
+	    margin: 0;     
+	    color: #666;
+	    padding-top: 90px;
+	    font-size: 48px;
+	    font-family: "trebuchet ms", sans-serif;    
+	}
+	
+	.item {  
+		background: url('/forex/images/currency1.jpg') no-repeat;
+	    text-align: center;
+	    height: 300px !important;
+	}
+	
+	#item1 {  
+		background: url('/forex/images/currency4.jpg') no-repeat;
+	}
+	
+	#item2 {  
+		background: url('/forex/images/currency10.jpg') no-repeat;
+		color: white;
+	}
+	
+	#first_item2_text {
+		padding-top: 13px;
+	}
+	
+	.item2_text { 
+		color: brown;
+		font-weight: bold;
+		font-family: OpenSans-Bold;
+		padding-top: 3px;
+		margin-left: -350px;
+		font-size: 42px !important;
+	}
+	
+	#item3{  
+		background: url('/forex/images/currency3.jpg') no-repeat;
+	}
+
+section #img {
+	width: 600px;
+	height: 300px;
+}
+
+	

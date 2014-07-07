@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import service.api.ICurrencyService;
+import service.api.INewsService;
 import service.api.IUserService;
 
 @Controller
@@ -23,6 +24,8 @@ public class LoginController {
 	private IUserService userService;
 	@Autowired 
 	private ICurrencyService currencyService;
+	@Autowired 
+	private INewsService newsService;
 	
 	@RequestMapping(value= "*", method = RequestMethod.POST, params={"login"})
 	public ModelAndView login(HttpServletRequest request, 

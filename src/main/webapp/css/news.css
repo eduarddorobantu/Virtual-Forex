@@ -1,0 +1,20 @@
+@import url("static/main.css");
+@import url("static/header.css");
+@import url("static/nav.css");
+@import url("static/section.css");
+@import url("static/right_section.css");
+@import url("static/footer.css");
+
+*, *:before, *:after {
+	-webkit-box-sizing: content-box; 
+	box-sizing: content-box; 
+}
+
+.news_field {
+	margin-top: 13px;
+}
+
+.news_field_title {
+	font-family: OpenSans-Bold;
+	font-size: 12.5px;
+}

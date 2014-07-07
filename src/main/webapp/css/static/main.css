@@ -1,0 +1,113 @@
+@import url("exchange_values.css");
+
+@font-face
+{
+	font-family: OpenSans-Bold;
+	src: url("../../open-sans/OpenSans-Bold.ttf");
+}
+
+@font-face
+{
+	font-family: OpenSans-Regular;
+	src: url("/forex/open-sans/OpenSans-Regular.ttf");
+}
+
+@font-face
+{
+	font-family: OpenSans-Italic;
+	src: url("/forex/open-sans/OpenSans-Italic.ttf");
+}
+
+body, header, div {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #c8c8c8;
+	background-color: #EAEAEA;
+}
+		
+section {
+	width: 998px;
+	overflow: overlay;
+	border-radius: 7px;
+	margin: 10px auto;
+	padding: 5px;
+	background-color: white;  
+}
+
+	#left_section {
+		float: left;
+		width: 660px;
+		min-height: 100px;
+		margin-left: 25px;
+		margin-bottom: 25px;
+		margin-top: 5px;
+	}	
+	
+	.subtitle {
+	text-decoration: none;
+	margin-bottom: 30px;
+	color: #666;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: left;
+	border-bottom: 1px solid #e3e3e3;
+	height: 12px;
+}
+
+		.subtitle span {
+			padding-right: 7px;
+			text-decoration: none;
+			background: white;
+			font-family: OpenSans-Bold;
+		}
+		
+		#error_div {
+			color: #b94a48;
+			background-color: #f2dede;
+			border-color: #eed3d7;
+			margin-bottom: 5px;
+			border: 1px solid #fbeed5;
+			border-radius: 4px;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			line-height: 20px;
+			padding: 8px 15px;
+		}
+		
+		#success_div {
+			color: #468847;
+			background-color: #dff0d8;
+			border-color: #d6e9c6;
+			margin-bottom: 5px;
+			border: 1px solid #d6e9c6;
+			border-radius: 4px;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			line-height: 20px;
+			padding: 8px 15px;
+		}
+		
+		#info_div {
+			color: #3a87ad;
+			background-color: #d9edf7;
+			border-color: #bce8f1;
+			margin-bottom: 5px;
+			border: 1px solid #bce8f1;
+			border-radius: 4px;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			line-height: 20px;
+			padding: 8px 15px;
+		}
+		
+		.news_link {
+			color: black;
+		}
+		
+		.news_link:hover {
+			color: #da7108;
+		}
+	

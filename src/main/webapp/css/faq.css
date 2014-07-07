@@ -1,0 +1,21 @@
+@import url("static/main.css");
+@import url("static/header.css");
+@import url("static/nav.css");
+@import url("static/section.css");
+@import url("static/right_section.css");
+@import url("static/footer.css");
+
+*, *:before, *:after {
+	-webkit-box-sizing: content-box; 
+	box-sizing: content-box; 
+}
+
+.faq_question {
+	font-family: OpenSans-Bold;
+	margin: 25px 0px 10px 0px;
+}
+
+.faq_initial {
+	color: chocolate;
+	font-weight: bold;
+}

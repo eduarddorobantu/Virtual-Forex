@@ -1,0 +1,133 @@
+
+section #img {
+	width: 600px;
+	height: 300px;
+}
+
+#currency_table {
+	border-bottom: 1px solid #D5D5D5; 
+	border-spacing: 0px;
+	background-color: #2E3F51;
+	background-image: linear-gradient(to bottom, white, #EFF0F0);
+	font-family: OpenSans-Bold;
+	margin: 18px;
+}
+
+#currency_table .table_title {
+	background-color: #2E3F51;
+	color: white;
+}
+
+	#currency_table .table_title td{
+		background-color: #2E3F51;
+		color: white;
+		padding: 6px;
+		font-size: 16px;
+	}
+
+#currency_table .table_header {
+	border: 1px solid lightblue;
+	background-color: lightblue;
+	color: black;
+	font-size: 16px;
+}
+
+	#currency_table tbody {
+		font-family: OpenSans-Regular;
+		font-size: 16px;		
+	}
+
+	#currency_table tbody tr:hover {
+		background-color: #D5D5D5;		
+		cursor: pointer;
+	}
+	
+	#currency_table tbody td {
+		border-top: 1px solid #D5D5D5;				
+	}
+		
+	#currency_table td {
+		padding: 7px 8px 7px 8px;
+	}
+	
+	#currency_table .cell0_header {
+		font-family: OpenSans-Bold;
+		width: 70px;
+	}
+	
+	#currency_table .cell1_header {
+		font-family: OpenSans-Bold;	
+		width: 90px;		
+	}
+	
+	#currency_table .cell2_header {
+		font-family: OpenSans-Bold;	
+		width: 65px;		
+	}
+	
+	#currency_table .cell3_header {
+		font-family: OpenSans-Bold;	
+		width: 65px;		
+	}
+	
+	#currency_table .cell4_header {
+		font-family: OpenSans-Bold;	
+		width: 65px;		
+	}
+	
+	#currency_table .cell5_header {
+		font-family: OpenSans-Bold;	
+		width: 75px;		
+	}
+	
+	#currency_table .cell6_header {
+		width: 70px;
+	}
+	
+	#currency_table .cell0 {
+		border-left: 1px solid #D5D5D5;
+		font-family: OpenSans-Bold;
+		width: 70px;
+	}
+	
+	#currency_table .cell1 {
+		font-family: OpenSans-Bold;	
+		width: 90px;		
+	}
+	
+		#currency_table .cell1 img {
+			padding-left: 2px;	
+		}
+		
+	#currency_table .cell2 {
+		font-family: OpenSans-Bold;	
+		width: 65px;		
+	}
+	
+	#currency_table .cell3 {
+		font-family: OpenSans-Bold;	
+		width: 65px;		
+	}
+	
+	#currency_table .cell4 {
+		font-family: OpenSans-Bold;	
+		width: 65px;		
+	}
+	
+	#currency_table .cell5 {
+		font-family: OpenSans-Bold;	
+		width: 75px;		
+	}
+	
+	#currency_table .cell6 {
+		border-right: 1px solid #D5D5D5;
+		width: 70px;
+	}
+	
+	#currency_table .last_row {
+		border-bottom: 1px solid #D5D5D5;
+	}
+	
+	
+	
+	

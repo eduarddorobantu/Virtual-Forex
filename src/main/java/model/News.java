@@ -1,7 +1,8 @@
 package model;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,14 +17,14 @@ public class News implements Serializable {
 	@Id private int id;
 	private String title;
 	private String content;
-	private Date date;
+	private Timestamp date;
 	
 	
 	public News() {
 		super();
 	}
 
-	public News(int id, String title, String content, Date date) {
+	public News(int id, String title, String content, Timestamp date) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -56,11 +57,11 @@ public class News implements Serializable {
 		this.content = content;
 	}
 
-	public Date getDate() {
+	public Timestamp getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(Timestamp date) {
 		this.date = date;
 	}
 

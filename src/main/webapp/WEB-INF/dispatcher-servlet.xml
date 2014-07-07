@@ -17,7 +17,7 @@
   </bean>
    
   <!-- Scan classpath for annotations (eg: @Service, @Repository etc) -->
-  <context:component-scan base-package="controller, service.api, service.impl, dao, model"/>
+  <context:component-scan base-package="controller, service.api, service.impl, dao, model, converter"/>
    
   <!-- JDBC Data Source. It is assumed you have MySQL running on localhost port 3306 with 
        username root and blank password. Change below if it's not the case -->

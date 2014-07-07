@@ -6,19 +6,24 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import model.Country;
+import model.Currency;
+import model.Log;
 import model.SecurityQuestion;
+import model.Silo;
 import model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import service.api.ICountryService;
 import service.api.ICurrencyService;
+import service.api.ILogService;
+import service.api.INewsService;
 import service.api.ISecurityQuestionService;
+import service.api.ISiloService;
 import service.api.IUserService;
 
 @Controller
@@ -31,17 +36,24 @@ public class RegisterController {
 	private ISecurityQuestionService securityQuestionService;
 	@Autowired 
 	private ICurrencyService currencyService;
+	@Autowired 
+	private INewsService newsService;
+	@Autowired 
+	private ISiloService siloService;
+	@Autowired 
+	private ILogService logService;
 	
-	@RequestMapping(value="/register.html", params={"!login", "!logout"})
+	@RequestMapping(value="/register.html", method=RequestMethod.GET)
 	public ModelAndView register() {
 		List<Country> countries = countryService.getAll();
 		List<SecurityQuestion> securityQuestions = securityQuestionService.getAll();
-		
+
 		ModelAndView mv = new ModelAndView("register");
 		mv.addObject("countries", countries);
 		mv.addObject("securityQuestions", securityQuestions);
 		mv.addObject("availableCurrencies", currencyService.getAll());
-		
+		mv.addObject("availableNews", newsService.getAll());
+		 
 		return mv;		
 	}	 
 	
@@ -49,7 +61,7 @@ public class RegisterController {
 	public ModelAndView registerUser(HttpServletRequest request) {
 		Map<String, String[]> parameters = request.getParameterMap();
 		User user = new User();
-		
+
 	    for(String key : parameters.keySet()) {
 	    	
 	    	if (key.equals("username"))
@@ -71,7 +83,24 @@ public class RegisterController {
 	    
 	    user.setRoleId(2);
 	    User userRegistered = userService.registerUser(user);
+
+	    //save the silos
+	    List<Currency> availableCurrencies = currencyService.getAll();	    
+	    for (Currency currency : availableCurrencies){
+	    	Silo silo = new Silo(0, 0, currency.getId(), user.getId());
+	    	if (currency.getId() != 1)
+	    		siloService.saveOrUpdateSilo(silo);
+	    }
 	    
+	    
+	    //save a log entry
+	    Log log = new Log();
+	    log.setOperation("register");
+	    log.setTransaction(0);
+	    log.setUser(user.getId());
+	    logService.saveLog(log);
+	    
+	    	    
 	    List<Country> countries = countryService.getAll();
 		List<SecurityQuestion> securityQuestions = securityQuestionService.getAll();
 		
@@ -84,6 +113,7 @@ public class RegisterController {
 	    else
 			mv.addObject("register_success", "success");
 	    mv.addObject("availableCurrencies", currencyService.getAll());
+	    mv.addObject("availableNews", newsService.getAll());
 	    
 	    return mv;	
 	}	 

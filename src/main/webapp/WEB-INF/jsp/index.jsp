@@ -21,7 +21,7 @@
 				getOpenRatesUSD();
 			</script>
 			<div id="left_section">
-				<div id="carousel" class="carousel slide" data-interval="7000" data-ride="carousel">
+				<div id="carousel" class="carousel slide" data-interval="70000" data-ride="carousel">
 			    	<!-- Carousel indicators -->
 			        <ol class="carousel-indicators">
 			            <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -31,11 +31,11 @@
 			       <!-- Carousel items -->
 			        <div class="carousel-inner">
 			            <div class="active item" id="item1">
-			          
+
 			            </div>
 			            <div class="item" id="item2">
-			                <h2>REAL-TIME</h2>
-			                <h2> CHARTS</h2>
+			                <h2 class="item2_text" id="first_item2_text">REAL-TIME</h2>
+			                <h2 class="item2_text"> CHARTS</h2>
 			            </div>
 			            <div class="item" id="item3">
 			            </div>
@@ -48,21 +48,8 @@
 			            <span class="glyphicon glyphicon-chevron-right"></span>
 			        </a>
 			    </div>
-			    <!-- <div class="subtitle">
-					<span>
-						Virtual Forex
-					</span>
-				</div>-->
 				<div style="margin-bottom: 20px; height: 305px;">
-					<!-- Demo Account: Although demo accounts attempt to replicate real markets, 
-					they operate in a simulated market environment. As such, there are key differences 
-					that distinguish them from real accounts; including but not limited to, the lack of 
-					dependence on real-time market liquidity and the availability of some products which 
-					may not be tradable on live accounts. The operational capabilities when executing orders
-					in a demo environment may result in atypically, expedited transactions; lack of rejected 
-					orders; and/or the absence of slippage. There may be instances where margin requirements 
-					differ from those of live accounts as updates to demo accounts may not always coincide 
-					with those of real accounts. -->
+					
 				</div> 
 				<div class="subtitle">
 					<span>
@@ -87,8 +74,9 @@
 				</table>
 			</div>
 			<jsp:include page="static/right_section.jsp"></jsp:include>
-			
+			<img src="images/horizontal_line.png" style="margin-left: 11px;"/>
 			<img src="images/mock3.png"/>
+			
 		</section>
 		
 		<jsp:include page="static/footer.jsp"></jsp:include>

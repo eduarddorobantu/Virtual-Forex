@@ -1,0 +1,137 @@
+@import url("static/main.css");
+@import url("static/header.css");
+@import url("static/nav.css");
+@import url("static/section.css");
+@import url("static/right_section.css");
+@import url("static/footer.css");
+
+*, *:before, *:after {
+	-webkit-box-sizing: content-box; 
+	box-sizing: content-box; 
+}
+
+.carousel {
+	margin-bottom: 20px;
+	float: left;
+	width: 660px;
+}
+
+	h2{
+	    margin: 0;     
+	    color: #666;
+	    padding-top: 90px;
+	    font-size: 52px;
+	    font-family: "trebuchet ms", sans-serif;    
+	}
+	
+	.item{
+	    background: #333;    
+	    text-align: center;
+	    height: 300px !important;
+	}
+
+section #img {
+	width: 600px;
+	height: 300px;
+}
+
+#transactions_table {
+	border-bottom: 1px solid #D5D5D5; 
+	border-spacing: 0px;
+	background-color: #2E3F51;
+	background-image: linear-gradient(to bottom, white, #EFF0F0);
+	font-family: OpenSans-Bold;
+	margin: 18px auto;
+}
+
+#user_selector_label {
+	font-family: OpenSans-Bold;
+	float: left;
+	margin: 2px 15px 2px 30px;
+}
+
+#user_selector {
+	margin-left: 30px;
+}
+
+	#user_selector select {
+		min-width: 120px;
+		font-family: OpenSans-Regular;
+	}
+
+#transactions_table .table_title {
+	background-color: #2E3F51;
+	color: white;
+}
+
+	#transactions_table .table_title td{
+		background-color: #2E3F51;
+		color: white;
+		padding: 6px;
+		font-size: 16px;
+	}
+
+#transactions_table .table_header {
+	border: 1px solid lightblue;
+	background-color: lightblue;
+	color: black;
+	font-size: 16px;
+}
+
+	#transactions_table tbody {
+		font-family: OpenSans-Regular;
+		font-size: 14px;		
+	}
+
+	#transactions_table tbody tr:hover {
+		background-color: #D5D5D5;		
+		cursor: pointer;
+	}
+	
+	#transactions_table tbody td {
+		border-top: 1px solid #D5D5D5;				
+	}
+		
+	#transactions_table td {
+		padding: 8px 10px 8px 10px;
+	}
+	
+	#transactions_table .cell0_header {
+		font-family: OpenSans-Bold;
+	}
+	
+	#transactions_table .cell1_header {
+		font-family: OpenSans-Bold;		
+	}
+	
+	#transactions_table .cell2_header {
+		font-family: OpenSans-Bold;	
+	}
+	
+	#transactions_table .cell3_header {
+		font-family: OpenSans-Bold;	
+	}
+	
+	#transactions_table .cell4_header {
+		font-family: OpenSans-Bold;	
+	}
+	
+	#transactions_table .cell5_header {
+		font-family: OpenSans-Bold;	
+	}
+	
+	#transactions_table .cell0 {
+		border-left: 1px solid #D5D5D5;
+		padding-left: 12px;
+		padding-top: 4px;
+	}
+	
+	#transactions_table .cell5 {
+		border-right: 1px solid #D5D5D5;
+	}
+	
+	#transactions_table td img {
+		width: 24px;
+		height: 18px;
+		padding-right: 4px;
+	}

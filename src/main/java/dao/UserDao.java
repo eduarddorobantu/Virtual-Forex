@@ -35,7 +35,7 @@ public class UserDao {
 		
 		if (!existsInDB(user.getUsername(), user.getEmail())) {
 			session.persist(user);
-			return user;
+			return loginUser(user.getUsername(), user.getPassword());
 		}
 		else
 			return null;			

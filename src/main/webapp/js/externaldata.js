@@ -19,7 +19,7 @@ function getOpenRatesUSD() {
 	for (var i = 0; i < currencies.length; i++) {
 		var currency1 = currencies[i].substring(0, 3);
 		var currency2 = currencies[i].substring(3, currencies[i].length);
-		console.log(currency1 + " " + currency2);
+
 		if (currency1 != 'USD')
 			getOpenRatesFromUSD(dDate.getDate(), dDate.getMonth(), dDate.getFullYear(), currency1);
 		if (currency2 != 'USD') 
@@ -187,7 +187,6 @@ function updateRates() {
 function updateRatesCallback(data) {
   	var results = data.query.results.row;
   	var table_body = document.getElementById("currency_table").getElementsByTagName("tbody")[0];
-  	console.log(data);
   	
   	for (var i = 0; i < results.length; i++) {
   		var row = table_body.getElementsByTagName("tr")[i];
@@ -257,6 +256,23 @@ function updateColouredCell(row, position, insertResult, rate, lastRate) {
 }
 
 
+function getCurrencyExchanges() {
+    var script = document.createElement('script');
+    script.setAttribute('src', "http://query.yahooapis.com/v1/public/yql?q=select%20name%2Crate%2Cask%2Cbid%2Cdate%2Ctime%20from%20csv%20where%20url%3D'http%3A%2F%2Fdownload.finance.yahoo.com%2Fd%2Fquotes%3Fs%3D"+currencies[0]+"%253DX,"+currencies[1]+"%253DX,"+currencies[2]+"%253DX,"+currencies[3]+"%253DX,"+currencies[4]+"%253DX,"+currencies[5]+"%253DX,"+"%26f%3Dnl1abd1t1'%20and%20columns%3D'name%2Crate%2Cask%2Cbid%2Cdate%2Ctime'%0A&format=json&callback=getCurrencyExchangesCallback");
+    document.body.appendChild(script);
+}
+
+function getCurrencyExchangesCallback(data) {
+	var results = data.query.results.row;
+	document.getElementById("EURUSD").innerHTML = results[0].ask + ' / ' + results[0].bid;
+	document.getElementById("USDJPY").innerHTML = results[1].ask + ' / ' + results[1].bid;
+	document.getElementById("GBPUSD").innerHTML = results[2].ask + ' / ' + results[2].bid;
+	document.getElementById("USDCHF").innerHTML = results[3].ask + ' / ' + results[3].bid;
+	document.getElementById("EURDKK").innerHTML = results[4].ask + ' / ' + results[4].bid;
+	document.getElementById("EURCAD").innerHTML = results[5].ask + ' / ' + results[5].bid;
+
+	setTimeout(getCurrencyExchanges, refreshTimeout);
+}
 
 
 
